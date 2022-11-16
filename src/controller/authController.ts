@@ -1,10 +1,13 @@
-import { Request, Response } from "express";
-import authService from "../Services/authService";
-async function signUp(req:Request, res:Response ){
+import { Request, Response } from 'express';
+import authService from '../Services/authService';
+async function signUp(req: Request, res: Response) {
   const body = req.body;
   const userCreate = await authService.createUser(body);
-  res.status(201).send(userCreate)
+  res.status(201).send(userCreate);
 }
+
+async function signIn(req: Request, res: Response) {}
+
 export default {
   signUp
-}
+};
