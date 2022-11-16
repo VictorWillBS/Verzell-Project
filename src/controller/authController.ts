@@ -6,8 +6,13 @@ async function signUp(req: Request, res: Response) {
   res.status(201).send(userCreate);
 }
 
-async function signIn(req: Request, res: Response) {}
+async function signIn(req: Request, res: Response) {
+  const body = req.body;
+  const userLogged = await authService.login(body);
+  res.status(200).send(userLogged);
+}
 
 export default {
-  signUp
+  signUp,
+  signIn
 };
