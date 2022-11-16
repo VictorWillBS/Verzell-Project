@@ -5,7 +5,7 @@ export default function validSchema(Schema: any) {
     const toValid = req.body;
     const { error } = Schema.validate(toValid);
     if (error) {
-      throw { code: "Unprocessable Entity", message: error.details[0].message };
+      throw { code: "Unprocessable_Entity", message: error.details[0].message };
     }
     next();
   };
