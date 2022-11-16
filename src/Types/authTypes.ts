@@ -9,3 +9,4 @@ export interface IUserData {
 
 export type IUserId = Pick<User, 'id'>;
 export type ICreateUser = Omit<User, 'id' | 'createdAt'>;
+export type ILogin = Omit<User, 'id' | 'createdAt' | 'name'>;
