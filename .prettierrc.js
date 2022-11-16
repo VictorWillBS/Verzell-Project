@@ -6,5 +6,5 @@ module.exports = {
   formatOnSave: true,
   arrowParens: 'avoid',
   endOfLine: 'auto',
-  trailingComma: 'none',
+  trailingComma: 'none'
 };
