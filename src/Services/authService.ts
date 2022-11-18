@@ -5,7 +5,7 @@ import authRepository from '../Repository/authRepository';
 
 async function createUser(userData: IUserData) {
   if (userData.confirmPassword !== userData.password) {
-    throw { code: 'Bad_Request', message: 'Passwords Is Not Same.' };
+    throw { code: 'Unprocessable_Entity', message: 'Passwords Is Not Same.' };
   }
 
   const userExist = await authRepository.getByEmail(userData.email);
